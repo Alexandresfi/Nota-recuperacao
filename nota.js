@@ -19,8 +19,13 @@ function quantidade (){
             let n2 = parseInt(document.getElementById("n2").value);
             let n3 = parseInt(document.getElementById("n3").value);
             let media = (n1 + n2 + n3);
-            let nota = (50 -(media/3*6))/4;
+            if (media >=21) {
+                p.innerHTML = "<h2> Você não está na final! </h2>";
+            }else{
+                 let nota = (50 -(media/3*6))/4;
             p.innerHTML = "<h2> Você precisa tirar "+nota+"</h2>";
+            }
+           
         })
     }else if (numero == 4) {
         notas.style.display = "block";
@@ -31,8 +36,13 @@ function quantidade (){
             let n3 = parseInt(document.getElementById("n3").value);
             let n4 = parseInt(document.getElementById("n4").value);
             let media = (n1+n2+n3+n4);
-            let nota = (50 -(media/4*6))/4;
+            if (media >=28) {
+                p.innerHTML = "<h2> Você não está na final! </h2>";
+            }else{
+                 let nota = (50 -(media/4*6))/4;
             p.innerHTML = "<h2> Você precisa tirar "+nota+"</h2>";
+            }
+            
         })
         
     }else alert("Essa quantidade de notas é inválida, só é possível possuir 3 ou 4 notas. leia as intruções novamente!" );
