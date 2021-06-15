@@ -1,39 +1,76 @@
-//Soma de todas as notas = res;
-//(50-(res/3*6))/4
-let n4 = document.getElementById("n4")
-let notas = document.getElementsByClassName("notas")[0];
-let medias = document.getElementById("m1");
-let p = document.getElementsByClassName("mostrar")[0]
+<!DOCTYPE html>
+<html lang="en">
 
-function quantidade (){
-    let numero = parseInt(document.getElementById("qtno").value);
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <title>Notas Recuperação</title>
 
-    if (numero == 3) {
-        notas.style.display = "block";
-        n4.style.display = "none";
-        document.getElementById("calcular").style.marginLeft = "35%"
+    <style>
+        body {
+            background-image: url(/background-image/fundo\ 1.jpg);
+        }
 
-        document.getElementById("calcular").addEventListener("click", function() {
-            let n1 = parseInt(document.getElementById("n1").value);
-            let n2 = parseInt(document.getElementById("n2").value);
-            let n3 = parseInt(document.getElementById("n3").value);
-            let media = (n1 + n2 + n3);
-            let nota = (50 -(media/3*6))/4;
-            p.innerHTML = "<h2> Você precisa tirar "+nota+"</h2>";
-        })
-    }else if (numero == 4) {
-        notas.style.display = "block";
+        .notas {
+            display: none;
+        }
 
-        document.getElementById("calcular").addEventListener("click", function() {
-            let n1 = parseInt(document.getElementById("n1").value);
-            let n2 = parseInt(document.getElementById("n2").value);
-            let n3 = parseInt(document.getElementById("n3").value);
-            let n4 = parseInt(document.getElementById("n4").value);
-            let media = (n1+n2+n3+n4);
-            let nota = (50 -(media/4*6))/4;
-            p.innerHTML = "<h2> Você precisa tirar "+nota+"</h2>";
-        })
-        
-    }else alert("Essa quantidade de notas é inválida, só é possível possuir 3 ou 4 notas. leia as intruções novamente!" );
-}
+        #qtno {
+            width: 188px;
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: rgba(255, 255, 14, 0.596);
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            margin-top: 200px;
+        }
+
+        h3, h2{
+            text-align: center;
+            font-family: 'Noto Serif', serif;
+            color:black;
+        }
+
+        input{
+            
+            margin-left: 35%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <p> <h3>Calcularmos quanto você precisará tirar na final, para não reprovar. Informe o que se pede:</h3></p>
+            <p><h3> Sua escola trabalha com trimestre ou bimestre? caso seja trimestre você tem 3 notas, se for bimestre você
+                possui 4 notas.</h3></p>
+            <input type="number" name="quantidade de notas" placeholder="Informe a quantidade de notas" id="qtno">
+            <button id="botao" onclick="quantidade()">Enviar</button>
+        </header>
+
+        <div class="notas">
+            <input type="number" name="nota 1" placeholder="nota 1" id="n1"> <br>
+            <input type="number" name="nota 2" placeholder="nota 2" id="n2"> <br>
+            <input type="number" name="nota 3" placeholder="nota 3" id="n3"> <br>
+            <input type="number" name="nota 4" placeholder="nota 4" id="n4">
+            <button id="calcular">Calcular</button>
+        </div>
+
+        <div>
+            <p class="mostrar">
+
+            </p>
+        </div>
+
+    </div>
+    <script src="nota.js"></script>
+</body>
+
+</html>
