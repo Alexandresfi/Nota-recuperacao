@@ -28,7 +28,7 @@ function quantidade (){
            
         })
     }else if (numero == 4) {
-         ocument.getElementById("calcular").style.marginLeft = "35%";
+         ocument.getElementById("calcular").style.textAlign = "center";
         notas.style.display = "block";
         n4.style.display = "block";
        
