@@ -28,10 +28,10 @@ function quantidade (){
            
         })
     }else if (numero == 4) {
+         ocument.getElementById("calcular").style.marginLeft = "35%";
         notas.style.display = "block";
         n4.style.display = "block";
-        ocument.getElementById("calcular").style.marginLeft = "35%";
-
+       
         document.getElementById("calcular").addEventListener("click", function() {
             let n1 = parseInt(document.getElementById("n1").value);
             let n2 = parseInt(document.getElementById("n2").value);
