@@ -1,94 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./nota.css">
     <title>Notas Recuperação</title>
 
-    <style>
-        body {
-            background-image: url(/background-image/fundo\ 1.jpg);
-        }
-
-        .notas {
-            display: none;
-        }
-
-        #qtno {
-            width: 188px;
-        }
-
-        .container {
-            max-width: 900px;
-            background-color: rgba(255, 255, 14, 0.596);
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            margin-top: 200px;
-        }
-
-        h3, h2{
-            text-align: center;
-            font-family: 'Noto Serif', serif;
-            color:black;
-        }
-
-        input{
-            
-            margin-left: 35%;
-        }
-        
-        ul{
-            display: flex;
-            list-style: none;
-            justify-content: flex-end;
-            align-items: center;
-        }
-        li{
-            margin-left: 20px;
-        }
-        li>p{
-            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-    </style>
 </head>
 
 <body>
 
+
     <div class="container">
         <header>
-            <p> <h3>Calcularmos quanto você precisará tirar na final, para não reprovar. Informe o que se pede:</h3></p>
-            <p><h3> Sua escola trabalha com trimestre ou bimestre? caso seja trimestre você tem 3 notas, se for bimestre você
-                possui 4 notas.</h3></p>
-            <input type="number" name="quantidade de notas" placeholder="Informe a quantidade de notas" id="qtno">
-            <button id="botao" onclick="quantidade()">Enviar</button>
+            <h1>Nota Necessária</h1>
+            <p>Saiba a nota que você precisa ter para não reprovar.</p>
+            <p>Caso sua escola tenha 3 trimestres, então você terá 3 notas.</p>
+            <p>Caso seja 4 bimestres, então você terá 4 notas.</p>
         </header>
 
+            <input type="number" name="quantidade de notas" placeholder="Informe a quantidade de notas" id="N">
+            <button id="botao">Enviar</button>
+
         <div class="notas">
-            <input type="number" name="nota 1" placeholder="nota 1" id="n1"> <br>
-            <input type="number" name="nota 2" placeholder="nota 2" id="n2"> <br>
-            <input type="number" name="nota 3" placeholder="nota 3" id="n3"> <br>
-            <input type="number" name="nota 4" placeholder="nota 4" id="n4">
-            <button id="calcular">Calcular</button>
+            
         </div>
 
-        <div>
-            <p class="mostrar">
-            
-                
-                  <ul>
+        <div class="mostrar">
+
+        </div>
+
+            <nav>
+                <ul>
                     <li> <p>Desenvolvedor: Alexandre Nascimento</p> </li>
                     <a href="https://www.linkedin.com/in/alexandre-nascimento-66692920a/"><li> <img src="./background-image/linkedin.png" alt="linkedin"></li></a>
                     <a href="https://github.com/Alexandresfi"><li> <img src="./background-image/github.png" alt="github"></li></a>
-                </ul>      
-            </p>
-        </div>
-
+                </ul>                
+            </nav>
     </div>
+    
     <script src="nota.js"></script>
 </body>
 
