@@ -1,20 +1,16 @@
 //Soma de todas as notas = res;
 //(50-(res/3*6))/4
-let n4 = document.getElementById("n4")
 let notas = document.getElementsByClassName("notas")[0];
 let medias = document.getElementById("m1");
 let p = document.getElementsByClassName("mostrar")[0]
 
-function quantidade (){
-    let numero = parseInt(document.getElementById("qtno").value);
-    
+document.getElementById("botao").addEventListener("click",()=>{
 
-    if (numero == 3) {
-        notas.style.display = "block";
-        n4.style.display = "none";
-        document.getElementById("calcular").style.marginLeft = "35%";
+    let numero = parseInt(document.getElementById("N").value);
 
-        document.getElementById("calcular").addEventListener("click", function() {
+    if (numero==3) {
+        notas.innerHTML = '<input type="number" name="nota 1" placeholder="nota 1" id="n1"> <br> <input type="number" name="nota 2" placeholder="nota 2" id="n2"> <br> <input type="number" name="nota 3" placeholder="nota 3" id="n3"> <br> <button id="calcular">Calcular</button>'        
+        document.getElementById("calcular").addEventListener("click",()=>{
             let n1 = parseInt(document.getElementById("n1").value);
             let n2 = parseInt(document.getElementById("n2").value);
             let n3 = parseInt(document.getElementById("n3").value);
@@ -24,15 +20,11 @@ function quantidade (){
             }else{
                  let nota = (50 -(media/3*6))/4;
             p.innerHTML = "<h2> Você precisa tirar "+nota+"</h2>";
-            }
-           
+            } 
         })
-    }else if (numero == 4) {
-        document.getElementById("calcular").style.textAlign = "center";
-        notas.style.display = "block";
-        n4.style.display = "block";
-       
-        document.getElementById("calcular").addEventListener("click", function() {
+    }else if (numero==4) {
+        notas.innerHTML = '<input type="number" name="nota 1" placeholder="nota 1" id="n1"> <br> <input type="number" name="nota 2" placeholder="nota 2" id="n2"> <br> <input type="number" name="nota 3" placeholder="nota 3" id="n3"> <br> <input type="number" name="nota 4" placeholder="nota 4" id="n4"> <br><button id="calcular">Calcular</button>'      
+        document.getElementById("calcular").addEventListener("click",()=>{
             let n1 = parseInt(document.getElementById("n1").value);
             let n2 = parseInt(document.getElementById("n2").value);
             let n3 = parseInt(document.getElementById("n3").value);
@@ -44,8 +36,9 @@ function quantidade (){
                  let nota = (50 -(media/4*6))/4;
             p.innerHTML = "<h2> Você precisa tirar "+nota+"</h2>";
             }
-            
         })
-        
-    }else alert("Essa quantidade de notas é inválida, só é possível possuir 3 ou 4 notas. leia as intruções novamente!" );
-}
+    }else{
+        alert("Essa quantidade de notas é inválida, só é possível possuir 3 ou 4 notas. leia as intruções novamente!" );
+        notas.innerHTML="";
+    }
+})
