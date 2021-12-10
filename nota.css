@@ -1,0 +1,48 @@
+body {
+    background-image: url(/background-image/fundo\ 3.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+input{
+    width: 188px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    border: none;
+}
+
+button{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.container {
+    max-width: 900px;
+    background-color:rgba(0, 0, 0, 0.788);
+    color: white;
+    padding: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 50px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+li{
+    margin-right: 10px;
+}
